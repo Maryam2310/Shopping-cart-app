@@ -1,0 +1,257 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    background-color: #F7D6D0;
+
+}
+
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+
+}
+
+.inner-container {
+    margin: auto;
+    width: 100%;
+
+}
+
+
+
+
+.project-name {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 3rem;
+    color: #821D30;
+}
+
+.product-container {
+    background-color: #821D30;
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+    padding: 2rem 0;
+}
+
+.product {
+    border: 3px solid #F7D6D0;
+
+    position: relative;
+    background-color: #FB6090;
+
+    .image-container {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        padding: 1rem;
+        color: #821D30;
+
+        img {
+            width: 100%;
+            height: 180px;
+            transition: 1s ease-in-out;
+
+
+            &:hover {
+                transform: scale(1.5);
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .price-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        background-color: #F7D6D0;
+        color: #821D30;
+        padding: 1.5rem;
+        gap: 10px;
+
+        :nth-child(3) {
+            margin-left: -5px;
+
+        }
+
+    }
+}
+
+.add-to-cart {
+    button.cart-button {
+        background-color: #FB6090;
+        color: #821D30;
+        width: 100%;
+        padding: 1.5rem 0;
+        font-size: 1.8rem;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        transition: 1s ease-in-out;
+
+        &:hover {
+            background-color: #821D30;
+            color: #FB6090;
+        }
+    }
+
+}
+
+.cart-section {
+    width: 1000px;
+    margin: auto;
+    color: #821D30;
+    background-color: #FB6090;
+
+    h1 {
+        font-size: 1.9rem;
+        text-align: center;
+        padding-top: 1.5rem;
+
+        i {
+            padding-right: 1rem;
+        }
+
+
+    }
+
+    .heading {
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+
+
+        div {
+            font-size: 1.8rem;
+            font-weight: 600;
+            width: 100px;
+            align-self: center;
+            text-align: center;
+        }
+    }
+}
+
+
+.cart-item {
+    @extend .heading;
+    color: #821D30;
+
+    input[type=number]::-webkit-inner-spin-button {
+        cursor: pointer;
+
+    }
+
+    .item-quantity {
+        text-align: center;
+        font-size: 1.5rem;
+        outline: 0;
+        background-color: #F7D6D0;
+        border: 0;
+    }
+
+    .total-div {
+        display: flex;
+
+        button {
+            background: transparent;
+            font-size: 2rem;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            margin-right: 25px;
+            color: #821D30;
+
+            i {
+                transition: 1s ease-in-out;
+
+
+                &:hover {
+                    color: #F7D6D0;
+                }
+            }
+
+        }
+    }
+}
+
+.cart-total {
+
+
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 2rem;
+
+}
+
+
+
+@media (max-width:780px) {
+
+
+    .project-name {
+        font-size: 2rem;
+    }
+
+
+    .product-container,
+    .cart-section {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .product {
+
+        margin: 10px;
+    }
+
+    .cart-section {
+        .heading {
+
+            div {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .cart-item {
+        .item-quantity {
+            font-size: 1.3rem;
+            padding: 1rem 0;
+        }
+
+        .total-div {
+            max-width: 50px;
+            flex-direction: column;
+
+            button {
+                margin-right: 0;
+                font-size: 1rem;
+
+            }
+        }
+
+    }
+
+    .cart-total {
+
+        font-size: 1.3rem;
+
+    }
+}
